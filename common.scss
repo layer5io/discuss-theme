@@ -89,7 +89,7 @@
   grid-auto-flow: row;
   grid-template-columns: 1fr 1fr;
   .group-box {
-    background-color: none;
+    background-color: var(--primary);
     border: 0 !important;
     border-radius: 12px;
     color: var(--primary);
@@ -161,7 +161,7 @@
   .category-box {
     display: flex;
     flex-grow: 1;
-    background-color: var(--secondary);
+    background-color: none;
     border-left-width: 0;
     border-radius: 12px;
     margin: 0 0;
