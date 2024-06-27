@@ -1,0 +1,64 @@
+.custom-category-header {
+  margin-bottom: 1em;
+  font-size: 2em;
+  border-bottom: 2px solid var(--primary);
+  text-align: center;
+}
+
+.category-logo:not(.no-logo-present) + .category-details {
+  max-height: 132px;
+  height: calc(132px - 1em);
+  padding: 0.5em !important;
+}
+
+.custom-category-boxes {
+  grid-gap: 1em !important;
+}
+
+.custom-category-boxes .category-box .category-box-inner {
+  column-gap: 1em !important;
+}
+
+.custom-category-boxes
+  .category-box
+  .category-box-inner
+  .category-logo.no-logo-present {
+  height: 100% !important;
+}
+
+.custom-category-boxes .description {
+  max-height: unset !important;
+}
+
+.custom-category-boxes .category-box .category-box-inner .category-details {
+  padding: 1em;
+}
+
+.groups-header {
+  margin: 1em 0 0 0;
+}
+
+.groups-header-filters-name {
+  display: none !important;
+}
+
+.groups-boxes {
+  grid-template-columns: 1fr !important;
+}
+
+.category-box {
+  position: relative;
+}
+
+.parent-box-link {
+  // This avoids an issue with nested links by layering links instead
+  &:before {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+}

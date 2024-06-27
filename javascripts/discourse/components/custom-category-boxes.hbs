@@ -1,0 +1,30 @@
+<div class={{this.classNames}}>
+  {{#if this.shouldRenderHeadings}}
+    {{#if this.firstCategories}}
+      <CategoryHeader @header={{theme-setting "first_categories_header"}} />
+      <CategoryBoxes @categories={{this.firstCategories}} />
+    {{/if}}
+
+    {{#if this.secondCategories}}
+      <CategoryHeader @header={{theme-setting "second_categories_header"}} />
+      <CategoryBoxes @categories={{this.secondCategories}} />
+    {{/if}}
+
+    {{#if this.thirdCategories}}
+      <CategoryHeader @header={{theme-setting "third_categories_header"}} />
+      <CategoryBoxes @categories={{this.thirdCategories}} />
+    {{/if}}
+
+    {{#if this.fourthCategories}}
+      <CategoryHeader @header={{theme-setting "fourth_categories_header"}} />
+      <CategoryBoxes @categories={{this.fourthCategories}} />
+    {{/if}}
+
+    {{#if this.fifthCategories}}
+      <CategoryHeader @header={{theme-setting "fifth_categories_header"}} />
+      <CategoryBoxes @categories={{this.fifthCategories}} />
+    {{/if}}
+  {{else}}
+    <CategoryBoxes @categories={{@outletArgs.categories}} />
+  {{/if}}
+</div>

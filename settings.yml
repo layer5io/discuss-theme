@@ -1,0 +1,40 @@
+first_categories_header:
+  type: string
+  default: "First Categories Header"
+first_categories:
+  type: list
+  list_type: category
+  default: ""
+  description: "Chose the categories to feature for the First Header"
+second_categories_header:
+  type: string
+  default: "Second Categories Header"
+second_categories:
+  type: list
+  list_type: category
+  default: ""
+  description: "Choose the categories to feature under the Second Header"
+third_categories_header:
+  type: string
+  default: "Third Categories Header"
+third_categories:
+  type: list
+  list_type: category
+  default: ""
+  description: "Choose the categories to feature under the Third Header"
+fourth_categories_header:
+  type: string
+  default: "Fourth Categories Header"
+fourth_categories:
+  type: list
+  list_type: category
+  default: ""
+  description: "Choose the categories to feature under the Fourth Header"
+fifth_categories_header:
+  type: string
+  default: "Fifth Categories Header"
+fifth_categories:
+  type: list
+  list_type: category
+  default: ""
+  description: "Choose the categories to feature under the Fifth Header"
