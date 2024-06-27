@@ -194,9 +194,11 @@
         display: inline-block;
         width: 132px;
         height: 132px;
+        padding: 1rem;
         img {
-          height: 90%;
-          width: 90%;
+          object-fit: contain;
+          height: 100%;
+          width: 100%;
         }
         .category-abbreviation {
           display: none;
