@@ -195,8 +195,9 @@
         width: 132px;
         height: 132px;
         img {
+          object-fit: contain;
           height: 100%;
-          // width: 100%;
+          width: 10 0%;
         }
         .category-abbreviation {
           display: none;
