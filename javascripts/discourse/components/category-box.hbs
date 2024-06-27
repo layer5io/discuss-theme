@@ -13,7 +13,7 @@
     <div
       class="category-logo
         {{if @category.uploaded_logo.url '' 'no-logo-present'}}"
-      style={{this.backgroundColor}}
+      {{!-- style={{this.backgroundColor}} --}}
     >
       {{#if @category.uploaded_logo.url}}
         {{cdn-img
