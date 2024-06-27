@@ -161,8 +161,7 @@
   .category-box {
     display: flex;
     flex-grow: 1;
-    background-color: #fff;
-    // background-color: var(--secondary);
+    background-color: var(--secondary);
     border-left-width: 0;
     border-radius: 12px;
     margin: 0 0;
@@ -190,13 +189,14 @@
       column-gap: 48px;
       padding: 0;
       .category-logo {
+        background-color: none;
         align-self: center;
         display: inline-block;
         width: 132px;
         height: 132px;
         img {
           height: 100%;
-          width: 100%;
+          // width: 100%;
         }
         .category-abbreviation {
           display: none;
