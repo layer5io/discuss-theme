@@ -1,5 +1,5 @@
-# layer5-repo-template
-This repository is used as the boilerplate for consistency across all Layer5 repos.
+# Layer5 Discussion Forum Theme
+discuss.layer5.io uses this custom theme. Changes made to this repo are subsequently imported into the running server.
 
 <div>&nbsp;</div>
 
