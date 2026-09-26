@@ -62,3 +62,19 @@
     bottom: 0;
   }
 }
+
+// Fix #14: footer columns overflow on mobile because the base theme's
+// `flex-flow: flex-wrap` is invalid CSS (flex-wrap is not a valid
+// flex-direction value), so flex items never wrap. Override here to
+// make the four footer columns wrap into a 2×2 grid on small screens.
+footer .footer-columns {
+  flex-wrap: wrap;
+}
+
+footer .footer-links {
+  box-sizing: border-box;
+  flex: 0 0 50%;
+  max-width: 50%;
+  margin: 10px 0;
+  padding: 0 10px;
+}
