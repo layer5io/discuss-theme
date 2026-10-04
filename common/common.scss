@@ -336,3 +336,27 @@
     }
   }
 }
+
+// Footer responsive styling: ensure footer columns wrap gracefully on
+// smaller desktop, tablet, and mobile viewports, preventing the
+// fourth column (Socials) from overflowing horizontally.
+footer .footer-columns {
+  flex-wrap: wrap;
+}
+
+@media (max-width: 960px) {
+  footer .footer-links {
+    box-sizing: border-box;
+    flex: 0 0 50%;
+    max-width: 50%;
+    margin: 10px 0;
+    padding: 0 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  footer .footer-links {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
