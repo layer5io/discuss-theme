@@ -1,5 +1,5 @@
 import Component from "@glimmer/component";
-import { trustHTML } from "@ember/template";
+import { htmlSafe } from "@ember/template";
 import CategoryLogo from "discourse/components/category-logo";
 import CategoryTitleBefore from "discourse/components/category-title-before";
 import CategoryTitleLink from "discourse/components/category-title-link";
@@ -10,12 +10,9 @@ import icon from "discourse/helpers/d-icon";
 import lazyHash from "discourse/helpers/lazy-hash";
 
 export default class CategoryBox extends Component {
-  get backgroundColor() {
-    return trustHTML(`background-color: #${this.args.category.color}`);
-  }
-
-  get getAbbreviation() {
-    let abbr = this.args.category.name.replace(" and", "").split(" ");
+  get abbreviation() {
+    let name = this.args.category?.name || "";
+    let abbr = name.replace(" and", "").split(" ");
 
     if (abbr.length > 1) {
       abbr = abbr[0].charAt(0).toUpperCase() + abbr[1].charAt(0).toLowerCase();
@@ -44,7 +41,7 @@ export default class CategoryBox extends Component {
             <CategoryLogo @category={{@category}} />
           {{else}}
             <span class="category-abbreviation">
-              {{this.getAbbreviation}}
+              {{this.abbreviation}}
             </span>
           {{/if}}
         </div>
@@ -63,7 +60,7 @@ export default class CategoryBox extends Component {
           </div>
 
           <div class="description">
-            <p>{{trustHTML @category.description_excerpt}}</p>
+            <p>{{htmlSafe @category.description_excerpt}}</p>
           </div>
 
           {{#if @category.isGrandParent}}
