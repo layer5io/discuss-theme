@@ -161,6 +161,8 @@
   .category-box {
     display: flex;
     flex-grow: 1;
+    position: relative;
+    cursor: pointer;
     background-color: var(--secondary);
     border-left-width: 0;
     border-radius: 12px;
@@ -247,6 +249,17 @@
   }
   .category-box-heading {
     margin-bottom: 8px;
+    .parent-box-link {
+      &:before {
+        content: "";
+        position: absolute;
+        z-index: 0;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+      }
+    }
   }
   .description {
     color: var(--primary-high);
@@ -270,9 +283,13 @@
   }
   .subcategory {
     display: none;
+    position: relative;
+    z-index: 1;
   }
   .subcategories {
     display: none;
+    position: relative;
+    z-index: 1;
     .subcategory {
       .subcategory-image-placeholder {
         margin-right: 0;

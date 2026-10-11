@@ -1,7 +1,9 @@
 import Component from "@glimmer/component";
 import { service } from "@ember/service";
+import CategoryBoxes from "./category-boxes";
+import CategoryHeader from "./category-header";
 
-export default class extends Component {
+export default class CustomCategoryBoxes extends Component {
   @service router;
   @service site;
 
@@ -82,4 +84,37 @@ export default class extends Component {
       settings.fifth_categories.split("|").map((id) => Number(id))
     );
   }
+
+  <template>
+    <div class={{this.classNames}}>
+      {{#if this.shouldRenderHeadings}}
+        {{#if this.firstCategories}}
+          <CategoryHeader @header={{settings.first_categories_header}} />
+          <CategoryBoxes @categories={{this.firstCategories}} />
+        {{/if}}
+
+        {{#if this.secondCategories}}
+          <CategoryHeader @header={{settings.second_categories_header}} />
+          <CategoryBoxes @categories={{this.secondCategories}} />
+        {{/if}}
+
+        {{#if this.thirdCategories}}
+          <CategoryHeader @header={{settings.third_categories_header}} />
+          <CategoryBoxes @categories={{this.thirdCategories}} />
+        {{/if}}
+
+        {{#if this.fourthCategories}}
+          <CategoryHeader @header={{settings.fourth_categories_header}} />
+          <CategoryBoxes @categories={{this.fourthCategories}} />
+        {{/if}}
+
+        {{#if this.fifthCategories}}
+          <CategoryHeader @header={{settings.fifth_categories_header}} />
+          <CategoryBoxes @categories={{this.fifthCategories}} />
+        {{/if}}
+      {{else}}
+        <CategoryBoxes @categories={{@outletArgs.categories}} />
+      {{/if}}
+    </div>
+  </template>
 }
